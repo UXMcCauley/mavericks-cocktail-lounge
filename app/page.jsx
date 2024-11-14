@@ -100,25 +100,28 @@ export default function Home() {
         </div>
 
         {/* Values section */}
-        <div className="mx-auto p-8 mt-4 md:max-w-screen-7xl md:flex md:justify-between md:mx-6">
-          <div className="mx-auto mb-12 md:w-1/2 lg:w-1/3">
-            <h2 className={`text-2xl mb-3`}>Plan your visit</h2>
-            <p className={`text-gray-400 text-sm`}>Located in the heart of Hartford, Maverick&#39;s invites you to discover your new favorite spot. Walk
-              through our unassuming entrance and find yourself transported to a world of elegance, flavor, and
-              camaraderie.</p>
+        <div className="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
+          <div className={`mx-auto max-w-2xl lg:mx-0 lg:max-w-none md:flex`}>
+            <div className="mx-auto mb-12 md:w-1/2 lg:w-1/3">
+              <h2 className={`text-2xl mb-3`}>Plan your visit</h2>
+              <p className={`text-gray-400 text-sm`}>Located in the heart of Hartford, Maverick&#39;s invites you to
+                discover your new favorite spot. Walk
+                through our unassuming entrance and find yourself transported to a world of elegance, flavor, and
+                camaraderie.</p>
+            </div>
+            <dl className="mx-auto md:w-1/2 lg:w-2/3 grid md:ml-16 grid-cols-1 gap-8 text-base/7 text-gray-300 md:grid-cols-1 lg:grid-cols-2 lg:mx-0 lg:max-w-none ">
+              {values.map((value) => (
+                  <div key={value.name} className="relative pl-16">
+                    <dt className="inline font-semibold text-white">
+                      <value.icon aria-hidden="true" className="absolute left-1 top-1 size-10 text-amber-400"/>
+                      <p>{value.name}</p>
+                    </dt>
+                    {' '}
+                    <dd className="inline font-extralight">{value.description}</dd>
+                  </div>
+              ))}
+            </dl>
           </div>
-          <dl className="mx-auto md:w-1/2 lg:w-2/3 grid md:ml-16 grid-cols-1 gap-8 text-base/7 text-gray-300 md:grid-cols-1 lg:grid-cols-2 lg:mx-0 lg:max-w-none ">
-            {values.map((value) => (
-                <div key={value.name} className="relative pl-16">
-                  <dt className="inline font-semibold text-white">
-                    <value.icon aria-hidden="true" className="absolute left-1 top-1 size-10 text-amber-400"/>
-                    <p>{value.name}</p>
-                  </dt>
-                  {' '}
-                  <dd className="inline font-extralight">{value.description}</dd>
-                </div>
-            ))}
-          </dl>
         </div>
       </div>
   )
