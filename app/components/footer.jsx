@@ -33,8 +33,8 @@ const footerNavigation = {
 export default function Footer() {
     return (
         <footer >
-            <div className="mx-auto max-w-7xl px-6 pb-8 pt-32 lg:px-8 lg:pt-40">
-                <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 flex justify-between">
+            <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 lg:px-8 ">
+                <div className=" border-t border-white/10 pt-8  flex justify-between">
                     <div>
                         <p className="text-sm/6 text-gray-400">&copy; 2024 Maverick&#39;s Cocktail Lounge | All rights reserved.</p>
                     </div>
